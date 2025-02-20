@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas 🎄</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial, sans-serif';
+            overflow: hidden;
+            position: absolute;
+            color: rgb(248, 244, 244);
+            background-image: url(https://wallpapercave.com/wp/wp3365371.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            
+        }
+        
+        h1 {
+           text-align: left;
+           font-size: 4rem;
+           position: relative;
+           left: 150px;
+           top: 150px;
+         
+            color: #fff;
+           text-shadow: 2px 2px 5px black;
+        }
+
+        
+        
+
+        
+
+        @keyframes moveSanta {
+            0% { left: -300px; }
+            100% { left: 110%; }
+        }
+
+        /* Snowflakes */
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: white;
+            font-size: 1.2rem;
+            user-select: none;
+            animation: fall linear infinite;
+        }
+
+        
+        /* Interactive Button */
+        .greeting-btn {
+            position: absolute;
+            top: 520px;
+            left:200px;
+            display: inline-block;
+            background: #b31b1b;
+            color: white;
+            padding: 10px 20px;
+            margin: 20px auto;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .greeting-btn:hover {
+            background: #a02020;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <h1>      Merry Christmas </h1>
+
+
+    
+    
+    
+
+    <!-- Snowflakes -->
+    <script>
+        function createSnowflakes() {
+            const snowflakes = 100;
+            for (let i = 0; i < snowflakes; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.innerHTML = '❄';
+                snowflake.style.left = Math.random() * 100 + 'vw';
+                snowflake.style.animationDuration = Math.random() * 5 + 3 + 's';
+                snowflake.style.fontSize = Math.random() * 1.5 + 'rem';
+                document.body.appendChild(snowflake);
+            }
+        }
+        createSnowflakes();
+    </script>
+
+    <!-- Interactive Greeting Button -->
+    <div style="text-align: center; margin-bottom: 20px;">
+        <a href="../mini project/gf.html" class="greeting-btn">Click for Greeting!</a>
+    </div>
+
+    
+    
+</body>
+</html>
+
+
